@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#d6d6d6"/>
+<stop offset="100%" stop-color="#8c8c8c"/>
+</linearGradient>
+</defs>
+<rect width="480" height="420" rx="24" fill="url(#g)"/>
+<rect x="238" y="100" width="120" height="160" rx="14" fill="#f0f0f0"/>
+<circle cx="174" cy="194" r="78" fill="#cfcfcf"/>
+<circle cx="174" cy="194" r="54" fill="#7c7c7c"/>
+<circle cx="174" cy="194" r="32" fill="#dadada"/>
+<path d="M252 150H422" stroke="#ececec" stroke-width="16" stroke-linecap="round"/>
+<path d="M252 192H390" stroke="#ececec" stroke-width="16" stroke-linecap="round"/>
+<path d="M250 235H356" stroke="#ececec" stroke-width="16" stroke-linecap="round"/>
+<text x="34" y="382" font-family="Montserrat, sans-serif" font-size="28" fill="#ffffff" opacity=".9">about image placeholder</text>
+</svg>

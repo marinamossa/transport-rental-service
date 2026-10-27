@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Rental.Ly vehicle rental service. Rent motorcycles and cars for city trips, daily use and short-term travel with a convenient online catalog." />
+		<link rel="canonical" href="https://rental-ly.example/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://rental-ly.example/" />
+		<meta property="og:title" content="Rental.Ly — Motorcycle & Car Rental" />
+		<meta
+			property="og:description"
+			content="Browse motorcycles and cars for rent, compare options and book transport online with Rental.Ly." />
+		<meta
+			property="og:image"
+			content="https://rental-ly.example/img/og-preview.jpg" />
+		<meta
+			property="og:image:alt"
+			content="Rental.Ly vehicle rental website preview" />
+		<meta property="og:site_name" content="Rental.Ly" />
+		<meta property="og:locale" content="en_US" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Rental.Ly — Motorcycle & Car Rental" />
+		<meta
+			name="twitter:description"
+			content="Find a suitable motorcycle or car and book your next ride with Rental.Ly." />
+		<meta
+			name="twitter:image"
+			content="https://rental-ly.example/img/og-preview.jpg" />
+		<meta name="theme-color" content="#f5f5f5" />
+		<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Heng.Rental - Motorcycle & Car Rental</title>
+
+		<script defer src="js/hero-slider.js"></script>
+		<script defer src="js/vehicle-carousel.js"></script>
+		<script defer src="js/header.js"></script>
+
+		<script defer src="js/transport-popup.js"></script>
+		<script defer src="js/booking-form.js"></script>
+		<script defer src="js/callback-form.js"></script>
+		<script defer src="js/main.js"></script>
+	</head>
+
+	<body id="body">
+		<div class="wrapper">
+			<header class="header" id="header">
+				<div class="container">
+					<div class="header__inner">
+						<a class="header__logo logo" href="#">Heng.Rental</a>
+
+						<nav class="header__menu menu" aria-label="Main navigation">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a class="menu__link" href="#catalog">Catalog</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#about">About</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#footer">Contact</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="header__actions">
+							<a class="header__action-link" href="#">Booking</a>
+						</div>
+
+						<button
+							class="header__burger"
+							type="button"
+							aria-label="Open menu"
+							aria-expanded="false"
+							aria-controls="mobile-menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="mobile-menu" id="mobile-menu">
+					<div class="mobile-menu__overlay"></div>
+
+					<div class="mobile-menu__panel">
+						<div class="mobile-menu__top">
+							<a class="mobile-menu__logo logo" href="#">Heng.Rental</a>
+
+							<button
+								class="mobile-menu__close"
+								type="button"
+								aria-label="Close menu">
+								<span></span>
+							</button>
+						</div>
+
+						<nav class="mobile-menu__nav" aria-label="Mobile navigation">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__item">
+									<a class="mobile-menu__link" href="#home">Home</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a class="mobile-menu__link" href="#catalog">Order</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a class="mobile-menu__link" href="#about">About</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a class="mobile-menu__link" href="#footer">Contact</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="mobile-menu__actions">
+							<a class="mobile-menu__action-link" href="#">Login</a>
+							<a class="mobile-menu__button btn-regular" href="#">Sign Up</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="main_page">
+				<section class="hero" id="home">
+					<div class="hero__slider" aria-label="Hero slider">
+						<div class="hero__track">
+							<article class="hero__slide hero__slide--active">
+								<img
+									class="hero__slide-image"
+									src="img/hero-slide-1.jpg"
+									alt="Rental transport background" />
+							</article>
+							<article class="hero__slide">
+								<img
+									class="hero__slide-image"
+									src="img/hero-slide-2.jpg"
+									alt="Rental transport background" />
+							</article>
+							<article class="hero__slide">
+								<img
+									class="hero__slide-image"
+									src="img/hero-slide-3.jpg"
+									alt="Rental transport background" />
+							</article>
+							<article class="hero__slide">
+								<img
+									class="hero__slide-image"
+									src="img/hero-slide-4.jpg"
+									alt="Rental transport background" />
+							</article>
+						</div>
+					</div>
+
+					<div class="hero__overlay"></div>
+
+					<div class="container">
+						<div class="hero__content">
+							<p class="hero__subtitle">WELCOME TO</p>
+							<h1 class="hero__title">Heng.Rental</h1>
+							<div class="hero__pagination slider-pagination">
+								<button
+									class="slider-pagination__dot slider-pagination__dot--active"
+									type="button"
+									aria-label="Go to slide 1"></button>
+								<button
+									class="slider-pagination__dot"
+									type="button"
+									aria-label="Go to slide 2"></button>
+								<button
+									class="slider-pagination__dot"
+									type="button"
+									aria-label="Go to slide 3"></button>
+								<button
+									class="slider-pagination__dot"
+									type="button"
+									aria-label="Go to slide 4"></button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="catalog" id="catalog">
+					<div class="container">
+						<div class="catalog__inner">
+							<div class="catalog__search">
+								<h2 class="catalog__title">Where are you now?</h2>
+								<form class="catalog__search-form" action="#" method="get">
+									<label class="catalog__search-label" for="location">
+										<span class="catalog__search-icon">
+											<img src="img/search.svg" alt="" />
+										</span>
+										<input
+											class="catalog__search-input"
+											type="text"
+											name="location"
+											id="location"
+											placeholder="Thailand" />
+									</label>
+								</form>
+							</div>
+
+							<section
+								class="catalog__section vehicles"
+								aria-labelledby="motorcycle-title">
+								<div class="vehicles__header">
+									<h3 class="vehicles__title" id="motorcycle-title">
+										Motorcycle rental
+									</h3>
+									<div class="vehicles__controls">
+										<button
+											class="vehicles__arrow vehicles__arrow--prev"
+											type="button"
+											aria-label="Previous motorcycles"></button>
+										<button
+											class="vehicles__arrow vehicles__arrow--next"
+											type="button"
+											aria-label="Next motorcycles"></button>
+									</div>
+								</div>
+
+								<div class="vehicles__slider" data-slider="motorcycles">
+									<div class="vehicles__track">
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Vario 125 - Jakarta Selatan
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Honda Beat eSP - Ancol
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Benelli 250 - Tanjung Priok
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Forza 250cc - Kota Tua
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 5 out of 5">
+														<span>★ ★ ★ ★ ★</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Yamaha Fino - Kemang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Yamaha Fino - Kemang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Yamaha Fino - Kemang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Yamaha Fino - Kemang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-bike.png"
+														alt="Motorcycle placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Yamaha Fino - Kemang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">500 THB/day</p>
+												</div>
+											</a>
+										</article>
+									</div>
+								</div>
+							</section>
+
+							<section
+								class="catalog__section vehicles"
+								aria-labelledby="car-title">
+								<div class="vehicles__header">
+									<h3 class="vehicles__title" id="car-title">Car rental</h3>
+									<div class="vehicles__controls">
+										<button
+											class="vehicles__arrow vehicles__arrow--prev"
+											type="button"
+											aria-label="Previous cars"></button>
+										<button
+											class="vehicles__arrow vehicles__arrow--next"
+											type="button"
+											aria-label="Next cars"></button>
+									</div>
+								</div>
+
+								<div class="vehicles__slider" data-slider="cars">
+									<div class="vehicles__track">
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Toyota Agya - Bekasi
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Toyota Venturer - Bogor
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 5 out of 5">
+														<span>★ ★ ★ ★ ★</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Suzuki Swift - Kebon Jeruk
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Mitsubishi Mirage - Cawang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Honda Brio - Tanah Abang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Honda Brio - Tanah Abang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Honda Brio - Tanah Abang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+										<article class="vehicle-card">
+											<a class="vehicle-card__link" href="#">
+												<div class="vehicle-card__image-box">
+													<img
+														class="vehicle-card__image"
+														src="img/vehicle-car.png"
+														alt="Car placeholder" />
+												</div>
+												<div class="vehicle-card__body">
+													<h4 class="vehicle-card__title">
+														Honda Brio - Tanah Abang
+													</h4>
+													<div
+														class="vehicle-card__rating"
+														aria-label="Rating 4 out of 5">
+														<span>★ ★ ★ ★ ☆</span>
+													</div>
+													<p class="vehicle-card__price">1500 THB/day</p>
+												</div>
+											</a>
+										</article>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+
+				<section
+					class="about"
+					id="about"
+					style="
+						background-image:
+							linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+							url(img/about-background.jpg);
+					">
+					<div class="container">
+						<div class="about__inner">
+							<div class="about__content">
+								<h2 class="about__title">Heng.Rental</h2>
+								<p class="about__text">
+									Ride in comfort and explore with confidence. We offer reliable
+									car and motorcycle rentals for every kind of trip — from city
+									drives and weekend escapes to longer adventures. Our fleet is
+									well-maintained, easy to book, and ready when you are.
+								</p>
+								<p class="about__text">
+									Choose the perfect vehicle for your journey and enjoy flexible
+									rental options, fair prices, and friendly service. Whether you
+									want the freedom of a motorcycle or the comfort of a car, we
+									are here to help you hit the road with ease.
+								</p>
+								<a class="about__button btn-regular" href="#catalog"
+									>Book Now</a
+								>
+							</div>
+
+							<div class="about__media">
+								<img
+									class="about__image"
+									src="img/about-photo.jpg"
+									alt="Vehicle close-up placeholder" />
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="advantages">
+					<div class="container">
+						<div class="advantages__inner">
+							<h2 class="advantages__title">Why choose Heng.Rental?</h2>
+
+							<div class="advantages__grid">
+								<article class="advantage-card">
+									<div class="advantage-card__icon-box">
+										<img
+											class="advantage-card__icon"
+											src="img/icon-shield.svg"
+											alt="" />
+									</div>
+									<h3 class="advantage-card__title">Reliable Service</h3>
+									<p class="advantage-card__text">
+										We provide well-maintained cars and motorcycles you can
+										count on for every trip. Our team focuses on safety,
+										comfort, and a smooth rental experience from start to
+										finish.
+									</p>
+								</article>
+
+								<article class="advantage-card">
+									<div class="advantage-card__icon-box">
+										<img
+											class="advantage-card__icon"
+											src="img/icon-lightning.svg"
+											alt="" />
+									</div>
+									<h3 class="advantage-card__title">Fast Booking</h3>
+									<p class="advantage-card__text">
+										Renting with us is quick and easy. We keep the process
+										simple, so you can choose your vehicle, complete your
+										booking, and get on the road without wasting time.
+									</p>
+								</article>
+
+								<article class="advantage-card">
+									<div class="advantage-card__icon-box">
+										<img
+											class="advantage-card__icon"
+											src="img/icon-thumb.svg"
+											alt="" />
+									</div>
+									<h3 class="advantage-card__title">Best Value</h3>
+									<p class="advantage-card__text">
+										We offer flexible rental options, fair prices, and quality
+										service you can trust. With us, you get the right vehicle
+										for your journey at a price that makes sense.
+									</p>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__column footer__column--contacts">
+                <a class="footer__logo" href="#home" aria-label="Heng.Rental — back to top">Heng.Rental</a>
+                <!-- Replace these placeholders with the actual company details.
+                     Use mailto: and tel: links when the email and phone are available. -->
+                <address class="footer__contacts">
+                    <ul class="footer__list">
+                        <li class="footer__contact">
+    <svg class="footer__contact-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    <div><span class="footer__contact-label">Address</span><span class="footer__contact-value">Company address to be added</span></div>
+</li>
+                        <li class="footer__contact">
+    <svg class="footer__contact-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <div><span class="footer__contact-label">E-mail</span><span class="footer__contact-value">Company e-mail to be added</span></div>
+</li>
+                        <li class="footer__contact">
+    <svg class="footer__contact-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-2 2a16 16 0 0 0 6 6l2-2 5 3-1 4C10 22 2 14 3 4Z"/></svg>
+    <div><span class="footer__contact-label">Phone</span><span class="footer__contact-value">Company phone to be added</span></div>
+</li>
+                    </ul>
+                </address>
+                <h3 class="footer__column-title footer__social-title">Social media</h3>
+                <!-- Add the actual profile URLs and remove aria-disabled when available. -->
+                <div class="footer__socials" aria-label="Social media">
+								<a class="social-links" role="link" aria-disabled="true" aria-label="Facebook — link coming soon">
+									<svg
+										class="facebook"
+										width="10"
+										height="18"
+										viewBox="0 0 10 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.88215 9.80206L9.37504 6.64838H6.29324V4.60186C6.29324 3.73908 6.72375 2.89807 8.10399 2.89807H9.50503V0.213059C9.50503 0.213059 8.23362 0 7.01803 0C4.48007 0 2.82114 1.51047 2.82114 4.24484V6.64838H0V9.80206H2.82114V17.4259H6.29324V9.80206H8.88215Z" />
+									</svg>
+								</a>
+								<a class="social-links" role="link" aria-disabled="true" aria-label="Twitter — link coming soon">
+									<svg
+										class="twitter"
+										width="18"
+										height="16"
+										viewBox="0 0 18 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M15.6346 4.27361C15.6457 4.44247 15.6457 4.61137 15.6457 4.78023C15.6457 9.93077 12.0522 15.8654 5.48429 15.8654C3.46084 15.8654 1.58116 15.2261 0 14.1164C0.287493 14.1526 0.563891 14.1646 0.862445 14.1646C2.53203 14.1646 4.06898 13.5495 5.29631 12.5001C3.72621 12.4639 2.41042 11.3421 1.95708 9.79811C2.17824 9.83427 2.39936 9.85841 2.63158 9.85841C2.95222 9.85841 3.2729 9.81014 3.57142 9.72575C1.93499 9.36385 0.70762 7.79578 0.70762 5.90201V5.85378C1.18305 6.14328 1.73595 6.32421 2.32193 6.3483C1.35997 5.64868 0.729743 4.45454 0.729743 3.10356C0.729743 2.37984 0.906622 1.71642 1.21624 1.13743C2.97431 3.50162 5.61695 5.04556 8.5802 5.21446C8.52493 4.92496 8.49175 4.62344 8.49175 4.32188C8.49175 2.17478 10.084 0.425781 12.0632 0.425781C13.0915 0.425781 14.0202 0.896206 14.6726 1.65613C15.4798 1.48726 16.2538 1.16157 16.9393 0.715276C16.6739 1.61996 16.11 2.37988 15.3692 2.86234C16.0879 2.77794 16.7845 2.56077 17.4258 2.25925C16.9394 3.0312 16.3312 3.71872 15.6346 4.27361Z" />
+									</svg>
+								</a>
+
+								<a class="social-links" role="link" aria-disabled="true" aria-label="Instagram — link coming soon">
+									<svg
+										class="instagram"
+										width="17"
+										height="18"
+										viewBox="0 0 17 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17 5.82992C17 4.87961 16.7888 4.35166 16.5776 3.71812C16.3665 3.19017 16.0497 2.66222 15.6273 2.23986C15.205 1.71191 14.677 1.50073 14.1491 1.28955C13.6211 1.07837 12.9876 0.972778 12.0373 0.867188C11.087 0.867188 10.7702 0.867188 8.4472 0.867188C6.22981 0.867188 5.91304 0.867188 4.96273 0.867188C4.01242 0.867188 3.48447 1.07837 2.85093 1.28955C2.32298 1.50073 1.79503 1.8175 1.37267 2.23986C0.95031 2.76781 0.63354 3.19017 0.42236 3.82371C0.21118 4.35166 0.10559 4.9852 0 5.82992C0 6.78023 0 7.097 0 9.31439C0 11.6374 0 11.9541 0 12.7989C0 13.7492 0.21118 14.2771 0.42236 14.9107C0.63354 15.4386 0.95031 15.9666 1.37267 16.3889C1.90062 16.9169 2.32298 17.1281 2.85093 17.3392C3.37888 17.5504 4.01242 17.656 4.96273 17.7616C5.91304 17.7616 6.12422 17.7616 8.4472 17.7616C10.7702 17.7616 11.087 17.7616 11.9317 17.7616C12.882 17.7616 13.4099 17.5504 14.0435 17.3392C14.5714 17.1281 15.0994 16.8113 15.5217 16.3889C16.0497 15.861 16.2609 15.4386 16.472 14.9107C16.6832 14.3827 16.7888 13.7492 16.8944 12.7989C17 11.8486 16.8944 11.6374 16.8944 9.31439C16.8944 6.99141 17 6.78023 17 5.82992ZM8.4472 13.7492C6.01863 13.7492 4.11801 11.743 4.11801 9.41998C4.11801 6.99141 6.12422 5.09079 8.4472 5.09079C10.8758 5.09079 12.7764 7.097 12.7764 9.41998C12.882 11.743 10.8758 13.7492 8.4472 13.7492ZM12.9876 5.82992C12.4596 5.82992 11.9317 5.40756 11.9317 4.77402C11.9317 4.24607 12.354 3.71812 12.9876 3.71812C13.5155 3.71812 14.0435 4.14048 14.0435 4.77402C14.0435 5.40756 13.6211 5.82992 12.9876 5.82992Z" />
+										<path
+											d="M11.2976 9.31565C11.2976 10.8995 10.0305 12.1666 8.44663 12.1666C6.86278 12.1666 5.5957 10.8995 5.5957 9.31565C5.5957 7.7318 6.96837 6.57031 8.44663 6.57031C10.0305 6.57031 11.2976 7.83739 11.2976 9.31565Z" />
+									</svg>
+								</a>
+								<a class="social-links" role="link" aria-disabled="true" aria-label="LinkedIn — link coming soon">
+									<svg
+										class="linkedin"
+										width="19"
+										height="19"
+										viewBox="0 0 19 19"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17.6522 0.761719H1.35362C0.606794 0.761719 0 1.35136 0 2.0752V17.6662C0 18.39 0.606794 18.9797 1.35362 18.9797H17.6522C18.399 18.9797 19.0101 18.39 19.0101 17.6662V2.0752C19.0101 1.35136 18.399 0.761719 17.6522 0.761719ZM5.74545 16.3771H2.92789V7.68292H5.74969V16.3771H5.74545ZM4.33667 6.4955C3.43284 6.4955 2.70299 5.79199 2.70299 4.92989C2.70299 4.06779 3.43284 3.36429 4.33667 3.36429C5.23625 3.36429 5.97035 4.06779 5.97035 4.92989C5.97035 5.79606 5.24049 6.4955 4.33667 6.4955ZM16.3071 16.3771H13.4895V12.1479C13.4895 11.1395 13.4683 9.84224 12.0256 9.84224C10.5574 9.84224 10.3325 10.9402 10.3325 12.0748V16.3771H7.51491V7.68292H10.2179V8.87034H10.2561C10.6337 8.18717 11.5545 7.46739 12.9251 7.46739C15.7766 7.46739 16.3071 9.26886 16.3071 11.6112V16.3771Z" />
+									</svg>
+								</a>
+							</div>
+            </div>
+            <div class="footer__column footer__column--map">
+                <h3 class="footer__column-title">Find us</h3>
+                <!-- Preview location only. Replace q=Thailand with the exact company
+                     address or coordinates, URL-encoded, then update the caption. -->
+                <div class="footer__map">
+                    <iframe title="Google Maps — Thailand preview location"
+                        src="https://maps.google.com/maps?q=Thailand&amp;z=5&amp;output=embed"
+                        width="350" height="300" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+                <p class="footer__map-caption">Map preview · exact address to be added</p>
+            </div>
+            <div class="footer__column footer__column--callback">
+                <div class="callback">
+                    <h3 class="footer__column-title" id="callback-title">Request a callback</h3>
+                    <p class="callback__intro">Need help choosing your ride? Leave your number and let’s talk.</p>
+                    <!-- Front-end preview. Connect the submit handler in js/callback-form.js
+                         to the CRM before accepting real callback requests. -->
+                    <form class="callback__form" aria-labelledby="callback-title">
+                        <label class="callback__label" for="callback-phone">Phone number</label>
+                        <div class="callback__input-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-2 2a16 16 0 0 0 6 6l2-2 5 3-1 4C10 22 2 14 3 4Z"/></svg>
+                            <input class="callback__input" id="callback-phone" name="phone"
+                                type="tel" inputmode="tel" autocomplete="tel" required maxlength="30"
+                                placeholder="+66 …" aria-describedby="callback-hint callback-status" />
+                        </div>
+                        <p class="callback__hint" id="callback-hint">Please include your country code.</p>
+                        <button class="callback__button btn-regular" type="submit">Send request
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+                        </button>
+                        <p class="callback__status" id="callback-status" role="status" aria-live="polite">Preview form · sending is not connected yet.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">Copyright © Heng.Rental Ltd. All Right Reserved</p>
+        </div>
+    </div>
+</footer>
+		</div>
+
+		<div class="transport-popup" id="transport-popup" aria-hidden="true">
+			<div class="transport-popup__overlay"></div>
+
+			<div
+				class="transport-popup__dialog"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="transport-popup-title">
+				<button
+					class="transport-popup__close"
+					type="button"
+					aria-label="Close popup">
+					<span></span>
+				</button>
+
+				<div class="transport-popup__inner">
+					<div class="transport-popup__media">
+						<div class="transport-popup__slider" id="transport-popup-slider">
+							<div class="transport-popup__slider-viewport">
+								<div class="transport-popup__slider-track">
+									<div class="transport-popup__slide">
+										<img
+											class="transport-popup__image"
+											src="img/popup-slide.jpg"
+											alt="Transport photo placeholder" />
+									</div>
+									<div class="transport-popup__slide">
+										<img
+											class="transport-popup__image"
+											src="img/popup-slide1.jpg"
+											alt="Transport photo placeholder" />
+									</div>
+									<div class="transport-popup__slide">
+										<img
+											class="transport-popup__image"
+											src="img/popup-slide2.jpg"
+											alt="Transport photo placeholder" />
+									</div>
+								</div>
+							</div>
+
+							<div class="transport-popup__slider-controls">
+								<button
+									class="transport-popup__slider-arrow transport-popup__slider-arrow--prev"
+									type="button"
+									aria-label="Previous photo"></button>
+								<button
+									class="transport-popup__slider-arrow transport-popup__slider-arrow--next"
+									type="button"
+									aria-label="Next photo"></button>
+							</div>
+
+							<div class="transport-popup__slider-dots">
+								<button
+									class="transport-popup__slider-dot transport-popup__slider-dot--active"
+									type="button"
+									aria-label="Go to photo 1"></button>
+								<button
+									class="transport-popup__slider-dot"
+									type="button"
+									aria-label="Go to photo 2"></button>
+								<button
+									class="transport-popup__slider-dot"
+									type="button"
+									aria-label="Go to photo 3"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="transport-popup__content">
+						<section class="transport-popup__section">
+							<h2
+								class="transport-popup__section-title"
+								id="transport-popup-title">
+								Transport information
+							</h2>
+
+							<div class="transport-popup__grid transport-popup__grid--two">
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Brand</span>
+									<div class="transport-popup__value">Honda</div>
+								</div>
+
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Model</span>
+									<div class="transport-popup__value">ADV160</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="transport-popup__section">
+							<h3 class="transport-popup__section-title">
+								Additional information
+							</h3>
+
+							<div class="transport-popup__grid transport-popup__grid--two">
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Year</span>
+									<div class="transport-popup__value">2022</div>
+								</div>
+
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Mileage</span>
+									<div class="transport-popup__value">18000 km</div>
+								</div>
+
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Condition</span>
+									<div class="transport-popup__value">Excellent</div>
+								</div>
+
+								<div class="transport-popup__field">
+									<span class="transport-popup__label">Status</span>
+									<div class="transport-popup__value">Available</div>
+								</div>
+
+								<div
+									class="transport-popup__field transport-popup__field--full">
+									<span class="transport-popup__label">Location</span>
+									<div class="transport-popup__value">Khanom</div>
+								</div>
+							</div>
+						</section>
+
+                        <section class="transport-popup__section transport-booking" aria-labelledby="transport-booking-title">
+                            <h3 class="transport-popup__section-title" id="transport-booking-title">Book transport</h3>
+                            <p class="transport-booking__price-label" id="transport-rates-label">Price for rent:</p>
+                            <!-- Demo rates. Replace these values with the transport's actual rates. -->
+                            <ul class="transport-booking__rates" aria-labelledby="transport-rates-label">
+                                <li class="transport-booking__rate"><strong>500 <span>THB</span></strong><span>per day</span></li>
+                                <li class="transport-booking__rate"><strong>2,800 <span>THB</span></strong><span>per week</span></li>
+                                <li class="transport-booking__rate"><strong>9,000 <span>THB</span></strong><span>per month</span></li>
+                            </ul>
+
+                            <form class="transport-booking__form" id="transport-booking-form" aria-describedby="transport-booking-note">
+                                <div class="transport-booking__dates">
+                                    <div class="transport-popup__field">
+                                        <label class="transport-popup__label" for="booking-start">Start date</label>
+                                        <input class="transport-booking__input" id="booking-start" name="startDate" type="date" required />
+                                    </div>
+                                    <div class="transport-popup__field">
+                                        <label class="transport-popup__label" for="booking-end">End date</label>
+                                        <input class="transport-booking__input" id="booking-end" name="endDate" type="date" required />
+                                    </div>
+                                </div>
+                                <div class="transport-popup__field">
+                                    <label class="transport-popup__label" for="booking-name">Your name</label>
+                                    <input class="transport-booking__input" id="booking-name" name="customerName" type="text" autocomplete="name" placeholder="Your name" maxlength="100" required />
+                                </div>
+                                <div class="transport-popup__field">
+                                    <label class="transport-popup__label" for="booking-phone">Phone</label>
+                                    <input class="transport-booking__input" id="booking-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+66 81 234 5678" maxlength="30" aria-describedby="booking-phone-hint" required />
+                                    <p class="transport-booking__hint" id="booking-phone-hint">Include your country code.</p>
+                                </div>
+                                <div class="transport-popup__actions transport-booking__actions">
+                                    <button class="transport-popup__button transport-popup__button--primary" type="submit">Book</button>
+                                    <button class="transport-popup__button transport-popup__button--secondary" type="button" data-popup-close>Close</button>
+                                </div>
+                                <p class="transport-booking__note" id="transport-booking-note">Demo form — booking requests are not sent.</p>
+                                <p class="transport-booking__status" id="transport-booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                            </form>
+                        </section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#d7d8d9"/>
+<stop offset="100%" stop-color="#4a4f53"/>
+</linearGradient>
+<linearGradient id="road" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#656b70"/>
+<stop offset="100%" stop-color="#8d8d8d"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<ellipse cx="230" cy="140" rx="340" ry="200" fill="#ffffff" opacity=".35"/>
+<path d="M0 330C220 300 330 356 515 336C712 316 792 230 1030 233C1230 236 1368 293 1600 269V590H0V330Z" fill="#899089"/>
+<path d="M0 430C184 408 314 450 510 439C730 426 860 340 1064 348C1277 357 1392 423 1600 393V680H0V430Z" fill="#4f5557"/>
+<path d="M0 640L410 546L1002 590L1600 495V900H0V640Z" fill="#403830"/>
+<path d="M0 742C210 700 325 684 518 646C690 612 860 600 1065 618C1262 635 1416 656 1600 614V900H0V742Z" fill="url(#road)" opacity=".95"/>
+<rect x="590" y="456" width="270" height="98" rx="14" fill="#f5f6f7"/>
+<rect x="642" y="418" width="167" height="54" rx="12" fill="#e9ecef"/>
+<circle cx="652" cy="562" r="34" fill="#1e2328"/>
+<circle cx="801" cy="562" r="34" fill="#1e2328"/>
+<rect x="824" y="426" width="27" height="110" rx="5" fill="#262d33"/>
+<rect x="620" y="433" width="58" height="52" rx="8" fill="#c9d7dd"/>
+<rect x="686" y="433" width="56" height="52" rx="8" fill="#c9d7dd"/>
+<rect x="748" y="433" width="53" height="52" rx="8" fill="#c9d7dd"/>
+<rect x="603" y="408" width="218" height="10" rx="5" fill="#2a3137"/>
+<line x1="635" y1="408" x2="635" y2="369" stroke="#2a3137" stroke-width="6"/>
+<line x1="781" y1="408" x2="781" y2="369" stroke="#2a3137" stroke-width="6"/>
+<line x1="605" y1="370" x2="818" y2="370" stroke="#2a3137" stroke-width="6"/>
+<text x="86" y="140" font-family="Montserrat, sans-serif" font-size="38" fill="#2c2c2c" opacity=".7">Rental.Ly hero placeholder 1</text>
+</svg>

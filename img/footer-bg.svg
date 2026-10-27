@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420">
+<defs>
+<linearGradient id="f" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#6b6b6b"/>
+<stop offset="100%" stop-color="#444"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="420" fill="url(#f)"/>
+<rect x="0" y="90" width="1600" height="18" fill="#bcbcbc" opacity=".08"/>
+<rect x="0" y="146" width="1600" height="10" fill="#e2e2e2" opacity=".05"/>
+<rect x="0" y="236" width="1600" height="20" fill="#d7d7d7" opacity=".06"/>
+<rect x="0" y="312" width="1600" height="12" fill="#e1e1e1" opacity=".05"/>
+<g opacity=".23">
+<rect x="764" y="104" width="164" height="118" rx="10" fill="#d0d0d0"/>
+<rect x="794" y="134" width="28" height="58" fill="#7a7a7a"/>
+<rect x="836" y="134" width="28" height="58" fill="#7a7a7a"/>
+<rect x="878" y="134" width="28" height="58" fill="#7a7a7a"/>
+<circle cx="806" cy="236" r="20" fill="#2b2b2b"/>
+<circle cx="892" cy="236" r="20" fill="#2b2b2b"/>
+</g>
+<text x="50" y="56" font-family="Montserrat, sans-serif" font-size="24" fill="#ffffff" opacity=".35">footer background placeholder</text>
+</svg>
