@@ -11,13 +11,13 @@ function initCallbackForm() {
     }
     phone.addEventListener('input', () => {
         validatePhone()
-        status.textContent = 'Preview form · sending is not connected yet.'
+        status.textContent = ''
     })
     form.addEventListener('submit', event => {
-        // UI preview only. No phone number is sent or stored.
+        // Connect to CRM here; show confirmation only after a successful response.
         event.preventDefault()
         validatePhone()
         if (!form.reportValidity()) return
-        status.textContent = 'This form is a preview. Your request has not been sent.'
+        status.textContent = ''
     })
 }

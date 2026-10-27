@@ -104,7 +104,6 @@ input {
 
 button,
 .btn-regular,
-.header__action-link,
 .mobile-menu__action-link,
 .transport-popup__button {
     text-transform: uppercase;
@@ -250,6 +249,7 @@ p {
 }
 
 .header__action-link {
+    text-transform: none;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
