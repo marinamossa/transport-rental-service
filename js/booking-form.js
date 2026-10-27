@@ -54,8 +54,8 @@ function initBookingForm() {
 		validate()
 		if (!form.reportValidity()) return
 		// CRM integration point. Show success only after the CRM accepts a request.
-		// The demo intentionally does not send, store, or log personal information.
-		status.textContent = 'Your details are valid. This demo is not connected to booking yet, so your request has not been sent.'
+		// No request is sent until CRM integration is configured.
+		status.textContent = ''
 	})
 	validate()
 }
