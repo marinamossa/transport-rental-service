@@ -1987,14 +1987,29 @@ p {
 .cut-button {
     --cut-surface: transparent;
     --cut-edge: #ffffff;
+    --cut-size: 14px;
+    --cut-line: 1.2px;
+    --cut-diagonal: 0.497056px;
     position: relative;
     isolation: isolate;
-    min-height: 48px;
-    gap: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 244px;
+    max-width: 100%;
+    height: 56px;
+    min-height: 56px;
+    padding: 0 24px;
+    gap: 24px;
     border: 0;
     border-radius: 0;
     background: transparent;
     color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
     transition: color 320ms cubic-bezier(.22, 1, .36, 1);
 }
 
@@ -2010,7 +2025,7 @@ p {
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    clip-path: polygon(0 0, 94% 0, 100% 25%, 100% 100%, 6% 100%, 0 75%);
+    clip-path: polygon(0 0, calc(100% - var(--cut-size)) 0, 100% var(--cut-size), 100% 100%, var(--cut-size) 100%, 0 calc(100% - var(--cut-size)));
     background: var(--cut-surface);
     pointer-events: none;
 }
@@ -2025,19 +2040,37 @@ p {
     transition: transform 500ms cubic-bezier(.22, 1, .36, 1);
 }
 
-.cut-button .cut-button__frame {
+/* Fixed 14px, 45-degree corners. The inner polygon cuts out a transparent centre. */
+.cut-button::before {
+    content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    fill: none;
-    stroke: var(--cut-edge);
-    stroke-width: 1.2px;
+    background: var(--cut-edge);
     pointer-events: none;
+    clip-path: polygon(evenodd,
+        0 0,
+        calc(100% - var(--cut-size)) 0,
+        100% var(--cut-size),
+        100% 100%,
+        var(--cut-size) 100%,
+        0 calc(100% - var(--cut-size)),
+        0 0,
+        var(--cut-line) var(--cut-line),
+        calc(100% - var(--cut-size) - var(--cut-diagonal)) var(--cut-line),
+        calc(100% - var(--cut-line)) calc(var(--cut-size) + var(--cut-diagonal)),
+        calc(100% - var(--cut-line)) calc(100% - var(--cut-line)),
+        calc(var(--cut-size) + var(--cut-diagonal)) calc(100% - var(--cut-line)),
+        var(--cut-line) calc(100% - var(--cut-size) - var(--cut-diagonal)),
+        var(--cut-line) var(--cut-line),
+        0 0);
 }
+
+.header__action-link.cut-button,
+.about__button.cut-button { width: 244px; }
+.callback__button.cut-button { width: 100%; }
+.callback__input-wrap,
+.callback__input { border-radius: 0; }
 
 .cut-button__label,
 .cut-button__arrow {
