@@ -4,7 +4,7 @@ function initTransportPopup() {
 	const closeButton = popup?.querySelector('.transport-popup__close')
 	const cardLinks = document.querySelectorAll('.vehicle-card__link')
 	const bookingCloseButton = popup?.querySelector('[data-popup-close]')
-	const dialog = popup?.querySelector('.transport-popup__dialog')
+	const scrollArea = popup?.querySelector('.transport-popup__scroll')
 	let returnFocus = null
 
 	if (!popup || !overlay || !closeButton || !cardLinks.length) {
@@ -77,7 +77,7 @@ function initTransportPopup() {
 
 		currentSlideIndex = 0
 		updateSlider()
-		if (dialog) dialog.scrollTop = 0
+		if (scrollArea) scrollArea.scrollTop = 0
 		closeButton.focus({ preventScroll: true })
 	}
 
