@@ -34,7 +34,7 @@
 			content="https://rental-ly.example/img/og-preview.jpg" />
 		<meta name="theme-color" content="#f5f5f5" />
 		<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="css/style.css?v=20261105-dark-arrows" />
+		<link rel="stylesheet" href="css/style.css?v=20261105-transport-passport" />
 		<title>Heng.Rental - Motorcycle & Car Rental</title>
 
 		<script defer src="js/hero-slider.js"></script>
@@ -822,153 +822,111 @@
 				</button>
 
 				<div class="transport-popup__scroll">
-				<div class="transport-popup__inner">
-					<div class="transport-popup__media">
-						<div class="transport-popup__slider" id="transport-popup-slider">
-							<div class="transport-popup__slider-viewport">
-								<div class="transport-popup__slider-track">
-									<div class="transport-popup__slide">
-										<img
-											class="transport-popup__image"
-											src="img/popup-slide.jpg"
-											alt="Transport photo" />
-									</div>
-									<div class="transport-popup__slide">
-										<img
-											class="transport-popup__image"
-											src="img/popup-slide1.jpg"
-											alt="Transport photo" />
-									</div>
-									<div class="transport-popup__slide">
-										<img
-											class="transport-popup__image"
-											src="img/popup-slide2.jpg"
-											alt="Transport photo" />
+					<header class="transport-popup__header">
+						<div>
+							<p class="transport-popup__type">Motorcycle</p>
+							<h2 id="transport-popup-title">Honda ADV160</h2>
+						</div>
+						<p class="transport-popup__meta">
+							<span>Khanom</span>
+							<span class="transport-popup__availability">Available</span>
+						</p>
+					</header>
+					<div class="transport-popup__inner">
+						<div class="transport-popup__media">
+							<dl class="transport-popup__specs">
+								<div><dt>Year</dt><dd>2022</dd></div>
+								<div><dt>Mileage</dt><dd>18,000 km</dd></div>
+								<div><dt>Condition</dt><dd>Excellent</dd></div>
+							</dl>
+							<div class="transport-popup__slider" id="transport-popup-slider">
+								<div class="transport-popup__slider-viewport">
+									<div class="transport-popup__slider-track">
+											<div class="transport-popup__slide">
+												<img
+													class="transport-popup__image"
+													src="img/popup-slide.jpg"
+													alt="Transport photo" />
+											</div>
+											<div class="transport-popup__slide">
+												<img
+													class="transport-popup__image"
+													src="img/popup-slide1.jpg"
+													alt="Transport photo" />
+											</div>
+											<div class="transport-popup__slide">
+												<img
+													class="transport-popup__image"
+													src="img/popup-slide2.jpg"
+													alt="Transport photo" />
+											</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="transport-popup__slider-controls">
-								<button
-									class="transport-popup__slider-arrow transport-popup__slider-arrow--prev"
-									type="button"
-									aria-label="Previous photo"></button>
-								<button
-									class="transport-popup__slider-arrow transport-popup__slider-arrow--next"
-									type="button"
-									aria-label="Next photo"></button>
-							</div>
+								<div class="transport-popup__slider-controls">
+									<button
+										class="transport-popup__slider-arrow transport-popup__slider-arrow--prev"
+										type="button"
+										aria-label="Previous photo"></button>
+									<button
+										class="transport-popup__slider-arrow transport-popup__slider-arrow--next"
+										type="button"
+										aria-label="Next photo"></button>
+								</div>
 
-							<div class="transport-popup__slider-dots">
-								<button
-									class="transport-popup__slider-dot transport-popup__slider-dot--active"
-									type="button"
-									aria-label="Go to photo 1"></button>
-								<button
-									class="transport-popup__slider-dot"
-									type="button"
-									aria-label="Go to photo 2"></button>
-								<button
-									class="transport-popup__slider-dot"
-									type="button"
-									aria-label="Go to photo 3"></button>
+								<div class="transport-popup__slider-dots">
+									<button
+										class="transport-popup__slider-dot transport-popup__slider-dot--active"
+										type="button"
+										aria-label="Go to photo 1"></button>
+									<button
+										class="transport-popup__slider-dot"
+										type="button"
+										aria-label="Go to photo 2"></button>
+									<button
+										class="transport-popup__slider-dot"
+										type="button"
+										aria-label="Go to photo 3"></button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="transport-popup__content">
-						<section class="transport-popup__section">
-							<h2
-								class="transport-popup__section-title"
-								id="transport-popup-title">
-								Transport information
-							</h2>
+						<section class="transport-booking" aria-labelledby="transport-booking-title">
+							<h3 class="transport-booking__title" id="transport-booking-title">Book transport</h3>
+							<dl class="transport-booking__rates">
+								<div><dt>Per day</dt><dd>500 <span>THB</span></dd></div>
+								<div><dt>Per week</dt><dd>2,800 <span>THB</span></dd></div>
+								<div><dt>Per month</dt><dd>9,000 <span>THB</span></dd></div>
+							</dl>
 
-							<div class="transport-popup__grid transport-popup__grid--two">
-								<div class="transport-popup__field">
-									<span class="transport-popup__label">Brand</span>
-									<div class="transport-popup__value">Honda</div>
+							<form class="transport-booking__form" id="transport-booking-form">
+								<div class="transport-booking__dates">
+									<div class="transport-popup__field">
+										<label class="transport-popup__label" for="booking-start">Start date</label>
+										<input class="transport-booking__input" id="booking-start" name="startDate" type="date" required />
+									</div>
+									<div class="transport-popup__field">
+										<label class="transport-popup__label" for="booking-end">End date</label>
+										<input class="transport-booking__input" id="booking-end" name="endDate" type="date" required />
+									</div>
 								</div>
-
 								<div class="transport-popup__field">
-									<span class="transport-popup__label">Model</span>
-									<div class="transport-popup__value">ADV160</div>
+									<label class="transport-popup__label" for="booking-name">Your name</label>
+									<input class="transport-booking__input" id="booking-name" name="customerName" type="text" autocomplete="name" placeholder="Full name" maxlength="100" required />
 								</div>
-							</div>
+								<div class="transport-popup__field">
+									<label class="transport-popup__label" for="booking-phone">Phone</label>
+									<input class="transport-booking__input" id="booking-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+66 81 234 5678" maxlength="30" aria-describedby="booking-phone-hint" required />
+									<p class="transport-booking__hint" id="booking-phone-hint">Include your country code.</p>
+								</div>
+								<div class="transport-booking__actions">
+									<button class="transport-popup__button transport-popup__button--primary" type="submit">Book</button>
+									<button class="transport-popup__button transport-popup__button--secondary" type="button" data-popup-close>Close</button>
+								</div>
+								<p class="transport-booking__status" id="transport-booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
+							</form>
 						</section>
-
-						<section class="transport-popup__section">
-							<h3 class="transport-popup__section-title">
-								Additional information
-							</h3>
-
-							<div class="transport-popup__grid transport-popup__grid--two">
-								<div class="transport-popup__field">
-									<span class="transport-popup__label">Year</span>
-									<div class="transport-popup__value">2022</div>
-								</div>
-
-								<div class="transport-popup__field">
-									<span class="transport-popup__label">Mileage</span>
-									<div class="transport-popup__value">18000 km</div>
-								</div>
-
-								<div class="transport-popup__field">
-									<span class="transport-popup__label">Condition</span>
-									<div class="transport-popup__value">Excellent</div>
-								</div>
-
-								<div class="transport-popup__field">
-									<span class="transport-popup__label">Status</span>
-									<div class="transport-popup__value">Available</div>
-								</div>
-
-								<div
-									class="transport-popup__field transport-popup__field--full">
-									<span class="transport-popup__label">Location</span>
-									<div class="transport-popup__value">Khanom</div>
-								</div>
-							</div>
-						</section>
-
-                        <section class="transport-popup__section transport-booking" aria-labelledby="transport-booking-title">
-                            <h3 class="transport-popup__section-title" id="transport-booking-title">Book transport</h3>
-                            <p class="transport-booking__price-label" id="transport-rates-label">Price for rent:</p>
-                            <ul class="transport-booking__rates" aria-labelledby="transport-rates-label">
-                                <li class="transport-booking__rate"><strong>500 <span>THB</span></strong><span>per day</span></li>
-                                <li class="transport-booking__rate"><strong>2,800 <span>THB</span></strong><span>per week</span></li>
-                                <li class="transport-booking__rate"><strong>9,000 <span>THB</span></strong><span>per month</span></li>
-                            </ul>
-
-                            <form class="transport-booking__form" id="transport-booking-form">
-                                <div class="transport-booking__dates">
-                                    <div class="transport-popup__field">
-                                        <label class="transport-popup__label" for="booking-start">Start date</label>
-                                        <input class="transport-booking__input" id="booking-start" name="startDate" type="date" required />
-                                    </div>
-                                    <div class="transport-popup__field">
-                                        <label class="transport-popup__label" for="booking-end">End date</label>
-                                        <input class="transport-booking__input" id="booking-end" name="endDate" type="date" required />
-                                    </div>
-                                </div>
-                                <div class="transport-popup__field">
-                                    <label class="transport-popup__label" for="booking-name">Your name</label>
-                                    <input class="transport-booking__input" id="booking-name" name="customerName" type="text" autocomplete="name" placeholder="Your name" maxlength="100" required />
-                                </div>
-                                <div class="transport-popup__field">
-                                    <label class="transport-popup__label" for="booking-phone">Phone</label>
-                                    <input class="transport-booking__input" id="booking-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+66 81 234 5678" maxlength="30" aria-describedby="booking-phone-hint" required />
-                                    <p class="transport-booking__hint" id="booking-phone-hint">Include your country code.</p>
-                                </div>
-                                <div class="transport-popup__actions transport-booking__actions">
-                                    <button class="transport-popup__button transport-popup__button--primary" type="submit">Book</button>
-                                    <button class="transport-popup__button transport-popup__button--secondary" type="button" data-popup-close>Close</button>
-                                </div>
-                                <p class="transport-booking__status" id="transport-booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
-                            </form>
-                        </section>
 					</div>
-				</div>
 				</div>
 			</div>
 		</div>
