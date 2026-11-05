@@ -210,6 +210,15 @@ p {
     transition: color 0.25s ease;
 }
 
+.header__logo:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.header__logo:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
 .header--sticky .header__logo {
     color: rgba(41, 41, 41, 0.92);
 }
@@ -251,7 +260,7 @@ p {
 }
 
 .header--sticky .menu__link {
-	color: rgba(48, 48, 48, 0.78);
+	color: #252525;
 }
 
 .header__action-link {
@@ -675,40 +684,43 @@ p {
 }
 
 .vehicles__arrow {
-	position: relative;
 	width: 36px;
 	height: 36px;
+}
+
+.vehicles__arrow,
+.transport-popup__slider-arrow {
+	position: relative;
 	padding: 0;
-	border: 1px solid #d8d8d8;
+	border: 1px solid #1f2c3d;
 	border-radius: 50%;
-	background-color: #ffffff;
-	transition:
-		opacity 0.25s ease,
-		background-color 0.25s ease,
-		border-color 0.25s ease,
-		transform 0.25s ease;
+	background-color: #1f2c3d;
+	transition: transform 0.25s ease;
 }
 
-.vehicles__arrow:hover {
-	background-color: #f1f1f1;
-	border-color: #cfcfcf;
-	transform: translateY(-1px);
+@media (hover: hover) {
+	.vehicles__arrow:hover,
+	.transport-popup__slider-arrow:hover {
+		transform: scale(1.08);
+	}
 }
 
-.vehicles__arrow::before {
+.vehicles__arrow::before,
+.transport-popup__slider-arrow::before {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 10px;
 	height: 10px;
-	border-top: 2px solid #4a4a4a;
-	border-right: 2px solid #4a4a4a;
+	border-top: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
 	content: '';
-	transform: translate(-50%, -50%) rotate(45deg);
+	transform: translate(-78%, -50%) rotate(45deg);
 }
 
-.vehicles__arrow--prev::before {
-	transform: translate(-32%, -50%) rotate(-135deg);
+.vehicles__arrow--prev::before,
+.transport-popup__slider-arrow--prev::before {
+	transform: translate(-22%, -50%) rotate(-135deg);
 }
 
 .vehicles__slider {
@@ -1589,39 +1601,8 @@ p {
 }
 
 .transport-popup__slider-arrow {
-	position: relative;
 	width: 42px;
 	height: 42px;
-	padding: 0;
-	border: 1px solid #d8d8d8;
-	border-radius: 50%;
-	background-color: #ffffff;
-	transition:
-		background-color 0.25s ease,
-		border-color 0.25s ease,
-		transform 0.25s ease;
-}
-
-.transport-popup__slider-arrow:hover {
-	background-color: #f3f3f3;
-	border-color: #cccccc;
-	transform: translateY(-1px);
-}
-
-.transport-popup__slider-arrow::before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 10px;
-	height: 10px;
-	border-top: 2px solid #4a4a4a;
-	border-right: 2px solid #4a4a4a;
-	content: '';
-	transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.transport-popup__slider-arrow--prev::before {
-	transform: translate(-32%, -50%) rotate(-135deg);
 }
 
 .transport-popup__slider-dots {
@@ -2076,6 +2057,8 @@ p {
     .text-cta::after,
     .text-cta > span,
     .cta-arrow,
+    .vehicles__arrow,
+    .transport-popup__slider-arrow,
     .transport-popup__close::before,
     .transport-popup__close span,
     .transport-popup__close span::before {
