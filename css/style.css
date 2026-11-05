@@ -104,6 +104,7 @@ input {
 
 button,
 .btn-regular,
+.text-cta,
 .mobile-menu__action-link,
 .transport-popup__button {
     text-transform: uppercase;
@@ -226,50 +227,60 @@ p {
 }
 
 .menu__link {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
 	font-size: 17px;
 	font-weight: 500;
-	color: #fff;
-	/*color: rgba(48, 48, 48, 0.78);*/
-	transition: color 0.25s ease;
+	color: #ffffff;
+}
+
+.menu__link::after {
+	content: '';
+	position: absolute;
+	inset-inline: 0;
+	bottom: 5px;
+	height: 1px;
+	background: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 260ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.menu__link:is(:hover, :focus-visible)::after {
+	transform: scaleX(1);
 }
 
 .header--sticky .menu__link {
 	color: rgba(48, 48, 48, 0.78);
 }
 
-.menu__link:hover,
-.header__action-link:hover {
-	color: #111111;
-}
-
-.header__actions {
-	display: flex;
-	align-items: center;
-	gap: 18px;
-}
-
-.header__action-link {
-    text-transform: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px 18px;
-	border-radius: 10px;
-	background-color: transparent;
-	font-size: 17px;
-	font-weight: 500;
-	color: #fff;
-	transition: color 0.25s ease;
+.header__action-link .cta-arrow {
+	display: none;
 }
 
 .header--sticky .header__action-link {
-	color: #ffffff;
+	gap: 10px;
+	padding: 0 14px;
+	border: 1px solid #1f2c3d;
+	border-radius: 0;
 	background-color: #1f2c3d;
+	color: #ffffff;
+	transition: background-color 250ms ease, color 250ms ease;
 }
 
-.header__action-link:hover {
-	color: #ffffff;
-	background-color: #2e4058;
+.header--sticky .header__action-link::after {
+	display: none;
+}
+
+.header--sticky .header__action-link .cta-arrow {
+	display: block;
+}
+
+.header--sticky .header__action-link:is(:hover, :focus-visible) {
+	background-color: #ffffff;
+	color: #1f2c3d;
 }
 
 .header__burger {
@@ -452,8 +463,7 @@ p {
 }
 
 @media (max-width: 991px) {
-	.header__menu,
-	.header__actions {
+	.header__menu {
 		display: none;
 	}
 
@@ -832,6 +842,8 @@ p {
 }
 
 .about__button {
+	width: 244px;
+	max-width: 100%;
 	margin-top: 32px;
 }
 
@@ -1071,7 +1083,7 @@ p {
     min-height: 50px;
     padding: 0 13px;
     border: 1px solid #d9dde2;
-    border-radius: 10px;
+    border-radius: 0;
     background: #f7f7f7;
     color: #627080;
     transition: box-shadow 0.2s ease;
@@ -1088,6 +1100,7 @@ p {
     height: 48px;
     padding: 0;
     border: 0;
+    border-radius: 0;
     outline: 0;
     background: transparent;
     color: #303030;
@@ -1104,13 +1117,7 @@ p {
 }
 .callback__button {
     width: 100%;
-    gap: 14px;
     margin-top: 20px;
-    padding: 14px 16px;
-    line-height: 1.3;
-}
-.callback__button svg {
-    flex-shrink: 0;
 }
 .callback__button:focus-visible {
     outline: 2px solid #fcd54c;
@@ -1175,8 +1182,7 @@ p {
 		padding: 18px 0;
 	}
 
-	.header__menu,
-	.header__actions {
+	.header__menu {
 		display: none;
 	}
 
@@ -1306,9 +1312,6 @@ p {
 		padding: 56px 0;
 	}
 
-	.about__button {
-		width: 100%;
-	}
 
 	.advantages {
 		padding: 56px 0 70px;
@@ -1983,116 +1986,60 @@ p {
 	}
 }
 
-/* Chamfered calls to action share the site's existing light and dark colours. */
-.cut-button {
-    --cut-surface: transparent;
-    --cut-edge: #ffffff;
-    --cut-size: 14px;
-    --cut-line: 1.2px;
-    --cut-diagonal: 0.497056px;
+.text-cta {
     position: relative;
-    isolation: isolate;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    flex-shrink: 0;
-    width: 244px;
-    max-width: 100%;
-    height: 56px;
     min-height: 56px;
-    padding: 0 24px;
-    gap: 24px;
+    padding: 12px 0 16px;
+    gap: 22px;
     border: 0;
-    border-radius: 0;
     background: transparent;
-    color: #ffffff;
+    color: #1f2c3d;
     font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    white-space: nowrap;
-    transition: color 320ms cubic-bezier(.22, 1, .36, 1);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: .09em;
 }
 
-.cut-button--dark,
-.header--sticky .header__action-link.cut-button {
-    --cut-surface: #1f2c3d;
-    --cut-edge: #1f2c3d;
-    background: transparent;
+.callback__button.text-cta {
+    color: #ffffff;
 }
 
-.cut-button__surface {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    clip-path: polygon(0 0, calc(100% - var(--cut-size)) 0, 100% var(--cut-size), 100% 100%, var(--cut-size) 100%, 0 calc(100% - var(--cut-size)));
-    background: var(--cut-surface);
-    pointer-events: none;
-}
-
-.cut-button__surface::after {
+.text-cta::before,
+.text-cta::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: #ffffff;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 500ms cubic-bezier(.22, 1, .36, 1);
+    inset-inline: 0;
+    bottom: 4px;
+    height: 1px;
+    background: currentColor;
+    transition: transform 540ms cubic-bezier(.22, 1, .36, 1);
 }
 
-/* Fixed 14px, 45-degree corners. The inner polygon cuts out a transparent centre. */
-.cut-button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: var(--cut-edge);
-    pointer-events: none;
-    clip-path: polygon(evenodd,
-        0 0,
-        calc(100% - var(--cut-size)) 0,
-        100% var(--cut-size),
-        100% 100%,
-        var(--cut-size) 100%,
-        0 calc(100% - var(--cut-size)),
-        0 0,
-        var(--cut-line) var(--cut-line),
-        calc(100% - var(--cut-size) - var(--cut-diagonal)) var(--cut-line),
-        calc(100% - var(--cut-line)) calc(var(--cut-size) + var(--cut-diagonal)),
-        calc(100% - var(--cut-line)) calc(100% - var(--cut-line)),
-        calc(var(--cut-size) + var(--cut-diagonal)) calc(100% - var(--cut-line)),
-        var(--cut-line) calc(100% - var(--cut-size) - var(--cut-diagonal)),
-        var(--cut-line) var(--cut-line),
-        0 0);
-}
+.text-cta::before { transform-origin: right; }
+.text-cta::after { transform: scaleX(0); transform-origin: left; transition-delay: 110ms; }
+.text-cta:is(:hover, :focus-visible)::before { transform: scaleX(0); }
+.text-cta:is(:hover, :focus-visible)::after { transform: scaleX(1); }
 
-.header__action-link.cut-button,
-.about__button.cut-button { width: 244px; }
-.callback__button.cut-button { width: 100%; }
-.callback__input-wrap,
-.callback__input { border-radius: 0; }
-
-.cut-button__label,
-.cut-button__arrow {
-    position: relative;
-    z-index: 2;
-}
-
-.cut-button__arrow {
+.cta-arrow {
     flex-shrink: 0;
     transition: transform 520ms cubic-bezier(.22, 1, .36, 1);
 }
 
-.cut-button:is(:hover, :focus-visible) {
-    color: #1f2c3d;
-    background: transparent;
-    border-color: transparent;
-    transform: none;
+.text-cta > span {
+    transition: transform 400ms cubic-bezier(.22, 1, .36, 1);
 }
 
-.cut-button:is(:hover, :focus-visible) .cut-button__surface::after { transform: scaleX(1); }
-.cut-button:is(:hover, :focus-visible) .cut-button__arrow { transform: translate(3px, -3px); }
-.cut-button:active .cut-button__label { transform: translateY(1px); }
+.text-cta:is(:hover, :focus-visible) > span {
+    transform: translateX(4px);
+}
+
+.text-cta:is(:hover, :focus-visible) .cta-arrow,
+.header--sticky .header__action-link:is(:hover, :focus-visible) .cta-arrow {
+    transform: translate(3px, -3px);
+}
 
 /* Keep the close control stationary while only the contents scroll. */
 .transport-popup__scroll > .transport-popup__inner { padding-top: 52px; }
@@ -2102,12 +2049,16 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cut-button,
-    .cut-button__arrow,
-    .cut-button__surface::after,
+    .menu__link::after,
+    .header--sticky .header__action-link,
+    .text-cta::before,
+    .text-cta::after,
+    .text-cta > span,
+    .cta-arrow,
     .transport-popup__close::before,
     .transport-popup__close span,
     .transport-popup__close span::before {
         transition-duration: 0s;
+        transition-delay: 0s;
     }
 }
