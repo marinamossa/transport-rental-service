@@ -34,11 +34,11 @@
 			content="https://rental-ly.example/img/og-preview.jpg" />
 		<meta name="theme-color" content="#f5f5f5" />
 		<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="css/style.css?v=20261105-transport-passport" />
+		<link rel="stylesheet" href="css/style.css?v=20261105-fleet-grid" />
 		<title>Heng.Rental - Motorcycle & Car Rental</title>
 
 		<script defer src="js/hero-slider.js"></script>
-		<script defer src="js/vehicle-carousel.js"></script>
+		<script defer src="js/vehicle-carousel.js?v=20261105-fleet-grid"></script>
 		<script defer src="js/header.js"></script>
 
 		<script defer src="js/transport-popup.js?v=20261102-style"></script>
@@ -184,425 +184,251 @@
 					</div>
 				</section>
 
-				<section class="catalog" id="catalog">
+				<section class="catalog" id="catalog" aria-labelledby="catalog-title">
 					<div class="container">
-						<div class="catalog__inner">
-							<div class="catalog__intro">
-                                <h2 class="catalog__title">Need wheels?</h2>
-                                <h3 class="catalog__subtitle">A wide selection of vehicles to suit every taste.</h3>
-                            </div>
+						<div class="catalog__intro">
+							<h2 class="catalog__title" id="catalog-title">Need wheels?</h2>
+							<h3 class="catalog__subtitle">A wide selection of vehicles to suit every taste.</h3>
+						</div>
 
-							<section
-								class="catalog__section vehicles"
-								aria-labelledby="motorcycle-title">
-								<div class="vehicles__header">
-									<h3 class="vehicles__title" id="motorcycle-title">
-										Motorcycle
-									</h3>
-									<div class="vehicles__controls">
-										<button
-											class="vehicles__arrow vehicles__arrow--prev"
-											type="button"
-											aria-label="Previous motorcycles"></button>
-										<button
-											class="vehicles__arrow vehicles__arrow--next"
-											type="button"
-											aria-label="Next motorcycles"></button>
-									</div>
+						<div class="vehicles">
+							<div class="vehicles__header" hidden>
+								<div class="vehicles__filters" role="group" aria-label="Vehicle category">
+									<button type="button" data-vehicle-filter="all" aria-pressed="true" aria-controls="fleet-grid">All</button>
+									<button type="button" data-vehicle-filter="motorcycles" aria-pressed="false" aria-controls="fleet-grid">Motorcycles</button>
+									<button type="button" data-vehicle-filter="cars" aria-pressed="false" aria-controls="fleet-grid">Cars</button>
 								</div>
-
-								<div class="vehicles__slider" data-slider="motorcycles">
-									<div class="vehicles__track">
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Vario 125 - Jakarta Selatan
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Honda Beat eSP - Ancol
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Benelli 250 - Tanjung Priok
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Forza 250cc - Kota Tua
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 5 out of 5">
-														<span>★ ★ ★ ★ ★</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Yamaha Fino - Kemang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Yamaha Fino - Kemang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Yamaha Fino - Kemang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Yamaha Fino - Kemang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-bike.png"
-														alt="Motorcycle" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Yamaha Fino - Kemang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">500 THB/day</p>
-												</div>
-											</a>
-										</article>
-									</div>
+								<div class="vehicles__controls">
+									<button class="vehicles__arrow vehicles__arrow--prev" type="button"
+										aria-label="Previous vehicles" aria-controls="fleet-grid" aria-disabled="true"></button>
+									<button class="vehicles__arrow vehicles__arrow--next" type="button"
+										aria-label="Next vehicles" aria-controls="fleet-grid"></button>
 								</div>
-							</section>
+							</div>
 
-							<section
-								class="catalog__section vehicles"
-								aria-labelledby="car-title">
-								<div class="vehicles__header">
-									<h3 class="vehicles__title" id="car-title">Car</h3>
-									<div class="vehicles__controls">
-										<button
-											class="vehicles__arrow vehicles__arrow--prev"
-											type="button"
-											aria-label="Previous cars"></button>
-										<button
-											class="vehicles__arrow vehicles__arrow--next"
-											type="button"
-											aria-label="Next cars"></button>
-									</div>
-								</div>
-
-								<div class="vehicles__slider" data-slider="cars">
-									<div class="vehicles__track">
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Toyota Agya - Bekasi
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Toyota Venturer - Bogor
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 5 out of 5">
-														<span>★ ★ ★ ★ ★</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Suzuki Swift - Kebon Jeruk
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Mitsubishi Mirage - Cawang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Honda Brio - Tanah Abang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Honda Brio - Tanah Abang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Honda Brio - Tanah Abang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-										<article class="vehicle-card">
-											<a class="vehicle-card__link" href="#">
-												<div class="vehicle-card__image-box">
-													<img
-														class="vehicle-card__image"
-														src="img/vehicle-car.png"
-														alt="Car" />
-												</div>
-												<div class="vehicle-card__body">
-													<h4 class="vehicle-card__title">
-														Honda Brio - Tanah Abang
-													</h4>
-													<div
-														class="vehicle-card__rating"
-														aria-label="Rating 4 out of 5">
-														<span>★ ★ ★ ★ ☆</span>
-													</div>
-													<p class="vehicle-card__price">1500 THB/day</p>
-												</div>
-											</a>
-										</article>
-									</div>
-								</div>
-							</section>
+							<div class="vehicles__slider" id="fleet-grid" role="region" aria-label="Vehicle grid" tabindex="0">
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Vario 125</h3>
+											<p class="vehicle-card__location">Jakarta Selatan</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Toyota Agya</h3>
+											<p class="vehicle-card__location">Bekasi</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Honda Beat eSP</h3>
+											<p class="vehicle-card__location">Ancol</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Toyota Venturer</h3>
+											<p class="vehicle-card__location">Bogor</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Benelli 250</h3>
+											<p class="vehicle-card__location">Tanjung Priok</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Suzuki Swift</h3>
+											<p class="vehicle-card__location">Kebon Jeruk</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Forza 250cc</h3>
+											<p class="vehicle-card__location">Kota Tua</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Mitsubishi Mirage</h3>
+											<p class="vehicle-card__location">Cawang</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Yamaha Fino</h3>
+											<p class="vehicle-card__location">Kemang</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Honda Brio</h3>
+											<p class="vehicle-card__location">Tanah Abang</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Yamaha Fino</h3>
+											<p class="vehicle-card__location">Kemang</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Honda Brio</h3>
+											<p class="vehicle-card__location">Tanah Abang</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Yamaha Fino</h3>
+											<p class="vehicle-card__location">Kemang</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Honda Brio</h3>
+											<p class="vehicle-card__location">Tanah Abang</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Yamaha Fino</h3>
+											<p class="vehicle-card__location">Kemang</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="cars">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-car.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Car</p>
+											<h3 class="vehicle-card__title">Honda Brio</h3>
+											<p class="vehicle-card__location">Tanah Abang</p>
+											<p class="vehicle-card__price">1,500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+								<article class="vehicle-card" data-vehicle-type="motorcycles">
+									<a class="vehicle-card__link" href="#" aria-haspopup="dialog">
+										<div class="vehicle-card__image-box">
+											<img class="vehicle-card__image" src="img/vehicle-bike.png" alt="" loading="lazy" />
+										</div>
+										<div class="vehicle-card__body">
+											<p class="vehicle-card__category">Motorcycle</p>
+											<h3 class="vehicle-card__title">Yamaha Fino</h3>
+											<p class="vehicle-card__location">Kemang</p>
+											<p class="vehicle-card__price">500 <span>THB / day</span></p>
+										</div>
+									</a>
+								</article>
+							</div>
 						</div>
 					</div>
 				</section>

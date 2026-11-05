@@ -1,193 +1,43 @@
-/*infinity slider*/
-
 function initVehicleCarousels() {
-	const sliders = document.querySelectorAll('.vehicles')
+	const catalog = document.querySelector('#catalog .vehicles')
+	if (!catalog) return
 
-	if (!sliders.length) {
-		return
+	const viewport = catalog.querySelector('.vehicles__slider')
+	const controls = catalog.querySelector('.vehicles__header')
+	const previous = catalog.querySelector('.vehicles__arrow--prev')
+	const next = catalog.querySelector('.vehicles__arrow--next')
+	const filters = catalog.querySelectorAll('[data-vehicle-filter]')
+	const cards = catalog.querySelectorAll('[data-vehicle-type]')
+
+	function updateArrows() {
+		const end = viewport.scrollWidth - viewport.clientWidth
+		previous.setAttribute('aria-disabled', String(viewport.scrollLeft <= 1))
+		next.setAttribute('aria-disabled', String(viewport.scrollLeft >= end - 1))
 	}
 
-	sliders.forEach(slider => {
-		const track = slider.querySelector('.vehicles__track')
-		const prevButton = slider.querySelector('.vehicles__arrow--prev')
-		const nextButton = slider.querySelector('.vehicles__arrow--next')
-		const originalCards = Array.from(slider.querySelectorAll('.vehicle-card'))
+	function scrollPage(button, direction) {
+		if (button.getAttribute('aria-disabled') === 'true') return
+		viewport.scrollBy({ left: viewport.clientWidth * direction })
+	}
 
-		if (!track || !prevButton || !nextButton || !originalCards.length) {
-			return
-		}
-
-		let visibleCards = getVisibleCards()
-		let clonesCount = Math.min(visibleCards, originalCards.length)
-		let currentIndex = clonesCount
-		let isTransitioning = false
-
-		let startX = 0
-		let isDragging = false
-
-		setupSlider()
-		bindEvents()
-		updatePosition(false)
-
-		function getVisibleCards() {
-			if (window.innerWidth <= 767) {
-				return 2
-			}
-
-			if (window.innerWidth <= 991) {
-				return 3
-			}
-
-			if (window.innerWidth <= 1199) {
-				return 4
-			}
-
-			return 5
-		}
-
-		function getGap() {
-			const styles = window.getComputedStyle(track)
-			const gapValue = styles.columnGap || styles.gap || '0px'
-			return parseFloat(gapValue) || 0
-		}
-
-		function getCardWidth() {
-			const firstCard = track.querySelector('.vehicle-card')
-			return firstCard ? firstCard.offsetWidth : 0
-		}
-
-		function setupSlider() {
-			track.innerHTML = ''
-
-			visibleCards = getVisibleCards()
-			clonesCount = Math.min(visibleCards, originalCards.length)
-
-			const firstClones = originalCards
-				.slice(0, clonesCount)
-				.map(card => card.cloneNode(true))
-
-			const lastClones = originalCards
-				.slice(-clonesCount)
-				.map(card => card.cloneNode(true))
-
-			lastClones.forEach(card => {
-				card.classList.add('vehicle-card--clone')
-				track.appendChild(card)
+	filters.forEach(filter => {
+		filter.addEventListener('click', () => {
+			const category = filter.dataset.vehicleFilter
+			filters.forEach(button => {
+				button.setAttribute('aria-pressed', String(button === filter))
 			})
-
-			originalCards.forEach(card => {
-				track.appendChild(card)
+			cards.forEach(card => {
+				card.hidden = category !== 'all' && card.dataset.vehicleType !== category
 			})
-
-			firstClones.forEach(card => {
-				card.classList.add('vehicle-card--clone')
-				track.appendChild(card)
-			})
-
-			track.style.display = 'flex'
-			track.style.transition = 'transform 0.35s ease'
-			track.style.willChange = 'transform'
-
-			Array.from(track.children).forEach(card => {
-				card.style.flex = '0 0 auto'
-			})
-
-			currentIndex = clonesCount
-		}
-
-		function updatePosition(withAnimation = true) {
-			const gap = getGap()
-			const cardWidth = getCardWidth()
-			const moveValue = currentIndex * (cardWidth + gap)
-
-			if (!withAnimation) {
-				track.style.transition = 'none'
-			} else {
-				track.style.transition = 'transform 0.35s ease'
-			}
-
-			track.style.transform = `translateX(-${moveValue}px)`
-		}
-
-		function goToNext() {
-			if (isTransitioning) {
-				return
-			}
-
-			isTransitioning = true
-			currentIndex += 1
-			updatePosition(true)
-		}
-
-		function goToPrev() {
-			if (isTransitioning) {
-				return
-			}
-
-			isTransitioning = true
-			currentIndex -= 1
-			updatePosition(true)
-		}
-
-		function handleInfiniteLoop() {
-			const totalOriginal = originalCards.length
-
-			if (currentIndex >= totalOriginal + clonesCount) {
-				currentIndex = clonesCount
-				updatePosition(false)
-			}
-
-			if (currentIndex < clonesCount) {
-				currentIndex = totalOriginal + currentIndex
-				updatePosition(false)
-			}
-
-			isTransitioning = false
-		}
-
-		function refreshSlider() {
-			setupSlider()
-
-			requestAnimationFrame(() => {
-				updatePosition(false)
-			})
-		}
-
-		function bindEvents() {
-			nextButton.addEventListener('click', goToNext)
-			prevButton.addEventListener('click', goToPrev)
-
-			track.addEventListener('transitionend', handleInfiniteLoop)
-
-			window.addEventListener('resize', refreshSlider)
-
-			track.addEventListener('touchstart', event => {
-				startX = event.touches[0].clientX
-				isDragging = true
-			})
-
-			track.addEventListener('touchmove', event => {
-				if (!isDragging) {
-					return
-				}
-
-				const currentX = event.touches[0].clientX
-				const diffX = startX - currentX
-
-				if (Math.abs(diffX) > 50) {
-					if (diffX > 0) {
-						goToNext()
-					} else {
-						goToPrev()
-					}
-
-					isDragging = false
-				}
-			})
-
-			track.addEventListener('touchend', () => {
-				isDragging = false
-			})
-		}
+			viewport.scrollTo({ left: 0, behavior: 'instant' })
+			updateArrows()
+		})
 	})
+
+	previous.addEventListener('click', () => scrollPage(previous, -1))
+	next.addEventListener('click', () => scrollPage(next, 1))
+	viewport.addEventListener('scroll', updateArrows, { passive: true })
+	new ResizeObserver(updateArrows).observe(viewport)
+	controls.hidden = false
+	updateArrows()
 }
