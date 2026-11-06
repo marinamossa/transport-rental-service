@@ -1056,7 +1056,7 @@ p {
 	color: #edf0f4;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 	.advantages__scene {
 		position: absolute;
 		z-index: -1;
@@ -1064,15 +1064,20 @@ p {
 		aspect-ratio: auto;
 	}
 
+	.advantages__scene::after {
+		position: absolute;
+		inset: 0;
+		content: '';
+	}
+}
+
+@media (min-width: 1200px) {
 	.advantages__scene img {
 		object-position: 72% center;
 	}
 
 	.advantages__scene::after {
-		position: absolute;
-		inset: 0;
 		background: linear-gradient(90deg, rgba(16, 20, 27, 0.80), rgba(16, 20, 27, 0.69) 38%, rgba(16, 20, 27, 0.20) 58%, rgba(16, 20, 27, 0.07));
-		content: '';
 	}
 
 	.advantages__grid {
@@ -1085,28 +1090,39 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-	.advantages__inner {
-		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-	}
-
-	.advantages__title {
-		grid-column: 1 / -1;
+	.advantages {
+		padding-bottom: calc(32vw + 24px);
 	}
 
 	.advantages__scene {
-		grid-column: 2;
-		grid-row: 2;
-		align-self: center;
+		inset-block-start: auto;
+		width: 100%;
+		max-height: 100%;
 		aspect-ratio: 3 / 2;
 	}
 
 	.advantages__scene img {
-		object-position: 86% center;
+		object-position: center bottom;
+	}
+
+	.advantages__scene::after {
+		background: linear-gradient(180deg, #171a1f, rgba(23, 26, 31, 0.65) 36%, transparent 69%, rgba(23, 26, 31, 0.6));
 	}
 
 	.advantages__grid {
-		grid-column: 1;
-		grid-row: 2;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 14px;
+	}
+
+	.advantage-card {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto 1fr;
+		gap: 8px;
+		padding: 14px 16px;
+	}
+
+	.advantage-card__icon-box {
+		grid-row: auto;
 	}
 }
 
